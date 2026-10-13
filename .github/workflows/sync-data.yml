@@ -1,0 +1,110 @@
+# Synchronize the public fleet workbook without replacing valid published data on failure.
+name: Sync fleet data
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: fleet-data-sync-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  EXCEL_PUBLIC_URL: >-
+    https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQBFAfDfPCtYR7ZIlpuHhRttAV-fSfHJx0amC_sOm5ja4n4?e=uHm2ZG
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install converter dependency
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover --start-directory tests --verbose
+
+      - name: Download public Excel workbook
+        run: python scripts/download_excel.py "$EXCEL_PUBLIC_URL" "$RUNNER_TEMP/fleet-source.xlsx"
+
+      - name: Convert and validate in temporary storage
+        run: |
+          python scripts/sync_fleet_data.py \
+            "$RUNNER_TEMP/fleet-source.xlsx" \
+            "$RUNNER_TEMP/fleet-data.json" \
+            --javascript-output "$RUNNER_TEMP/fleet-data.js" \
+            --previous data/fleet-data.json \
+            --source-url "$EXCEL_PUBLIC_URL"
+          python scripts/validate_fleet_data.py "$RUNNER_TEMP/fleet-data.json"
+
+      - name: Replace published data only after successful validation
+        run: |
+          mv "$RUNNER_TEMP/fleet-data.json" data/fleet-data.json
+          mv "$RUNNER_TEMP/fleet-data.js" data/fleet-data.js
+
+      - name: Commit data only when it changed
+        id: commit
+        shell: bash
+        run: |
+          if git diff --quiet -- data/fleet-data.json data/fleet-data.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Fleet data is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fleet-data.json data/fleet-data.js
+          git commit -m "chore(data): sync fleet workbook"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  deploy-updated-data:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out newly synchronized main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Assemble static site
+        run: |
+          mkdir _site
+          cp index.html .nojekyll _site/
+          cp -R data _site/data
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy synchronized data
+        id: deployment
+        uses: actions/deploy-pages@v4
