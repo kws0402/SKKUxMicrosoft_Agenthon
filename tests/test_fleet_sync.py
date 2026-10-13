@@ -233,6 +233,8 @@ class FleetSyncTests(unittest.TestCase):
         self.assertIn("v.status==='CHARTER_PLANNED'", index)
         self.assertIn("plannedStatusBadge(v)", index)
         self.assertIn("${esc(v.operating_status)}${plannedStatusText(v)}", index)
+        self.assertIn('id="availability-filters"', index)
+        self.assertIn("availabilityFilter==='planned'?isCharterPlanned(v):!isCharterPlanned(v)", index)
 
 
 if __name__ == "__main__":
