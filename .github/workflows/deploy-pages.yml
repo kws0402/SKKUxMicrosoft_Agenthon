@@ -1,3 +1,4 @@
+# Publish the static fleet dashboard through GitHub Pages.
 name: Deploy GitHub Pages
 
 on:
