@@ -226,6 +226,12 @@ class FleetSyncTests(unittest.TestCase):
         self.assertTrue(script.endswith(";\n"))
         self.assertEqual(json.loads(script.removeprefix("window.FLEET_DATA=")[:-2]), payload)
 
+    def test_browser_distinguishes_operating_and_planned_charter_status(self) -> None:
+        index = (Path(__file__).parents[1] / "index.html").read_text(encoding="utf-8")
+        self.assertIn("v.status==='CHARTER_PLANNED'", index)
+        self.assertIn("plannedStatusBadge(v)", index)
+        self.assertIn("${esc(v.operating_status)}${plannedStatusText(v)}", index)
+
 
 if __name__ == "__main__":
     unittest.main()
