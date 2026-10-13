@@ -7999,6 +7999,46 @@
       "deck2_medium_available": 447,
       "deck3_small_capacity": 447,
       "deck3_small_available": 447
+    },
+    {
+      "vessel_name": "TEST OCEAN SPIRIT",
+      "vessel_id": "V-201",
+      "mmsi": "440900201",
+      "imo_number": "9800201",
+      "call_sign": "DM0201",
+      "vessel_type": "PCTC",
+      "flag_country": "KR",
+      "capacity": 7200,
+      "loaded_vehicle": 374,
+      "remaining_capacity": 6826,
+      "operating_status": "배선 가능",
+      "home_port_code": "KRPTK",
+      "max_speed_knots": 19.5,
+      "effective_speed_cap_knots": 17.5,
+      "environmental_speed_restriction": true,
+      "environmental_rule": "CII_SPEED_CAP",
+      "design_draft_m": 9.7,
+      "loa_m": 221,
+      "year_built": 2017,
+      "fleet_priority": "HIGH",
+      "far_east_return_required": true,
+      "availability_note": "자동 동기화 테스트 ",
+      "data_source": "MANUAL_TEST",
+      "last_updated": "2026-10-14T01:00:00",
+      "service_speed_knots": 19,
+      "current_max_speed_knots": 17.5,
+      "vessel_draft": 9.7,
+      "status": "AVAILABLE",
+      "available_capacity": 6826,
+      "maintenance_start_date": null,
+      "maintenance_end_date": null,
+      "status_before_reservation": null,
+      "deck1_large_capacity": 2275,
+      "deck1_large_available": 2275,
+      "deck2_medium_capacity": 2275,
+      "deck2_medium_available": 2275,
+      "deck3_small_capacity": 2276,
+      "deck3_small_available": 2276
     }
   ],
   "cargo": [
@@ -24324,6 +24364,32 @@
       "available_from_date": "2026-10-02T00:00:00",
       "available_port_code": "KRUSN",
       "route_change_allowed": false
+    },
+    {
+      "voyage_id": "VOY-2026-0201",
+      "vessel_id": "V-201",
+      "vessel_name": "TEST OCEAN SPIRIT",
+      "previous_port_code": "KRPUS",
+      "current_port_code": "KRPUS",
+      "next_port_code": "JPYOK",
+      "final_destination_port_code": "CNTXG",
+      "route_plan": "KRPUS > JPYOK > CNTXG",
+      "voyage_purpose": "OWN_CARGO",
+      "etd": "2026-10-27T11:00:00",
+      "eta": "2026-11-04T14:08:34",
+      "voyage_status": "출항 예정",
+      "planned_speed_knots": 17.5,
+      "environmental_speed_cap_knots": 17.5,
+      "route_distance_nm": 2911,
+      "remaining_distance_nm": 2911,
+      "month_end_departure": true,
+      "fleet_priority": "HIGH",
+      "far_east_return_required": true,
+      "data_source": "MANUAL_TEST",
+      "last_updated": "2026-10-14T01:00:00",
+      "available_from_date": "2026-10-14T01:00:00",
+      "available_port_code": "KRPUS",
+      "route_change_allowed": false
     }
   ],
   "vessel_live": [
@@ -27326,6 +27392,21 @@
       "nav_status": "Moored",
       "position_source": "SIMULATED_AIS",
       "last_updated": "2026-10-01T22:00:00"
+    },
+    {
+      "vessel_id": "V-201",
+      "vessel_name": "TEST OCEAN SPIRIT",
+      "mmsi": "440900201",
+      "voyage_id": "VOY-2026-0201",
+      "reported_port_code": null,
+      "latitude": 34,
+      "longitude": 128,
+      "speed_knots": 0.1,
+      "course_deg": 0,
+      "heading_deg": 0,
+      "nav_status": "Moored",
+      "position_source": "MANUAL_TEST",
+      "last_updated": "2026-10-14T01:00:00"
     }
   ],
   "maintenance_schedule": [
@@ -31372,6 +31453,21 @@
       "constraint_summary": "일반 배선 후보",
       "data_source": "SIMULATED",
       "last_updated": "2026-10-02T00:00:00"
+    },
+    {
+      "allocation_id": "ALC-V-201",
+      "allocation_month": "2026-10-01",
+      "vessel_id": "V-201",
+      "allocated_team": "FAR_EAST_TEAM",
+      "allocation_capacity": 6826,
+      "fleet_priority": "HIGH",
+      "far_east_return_required": true,
+      "switch_allowed": false,
+      "switch_approval_owner": "FLEET_MANAGEMENT",
+      "allocation_status": "ALLOCATED",
+      "constraint_summary": "자동 동기화 테스트 ",
+      "data_source": "MANUAL_TEST",
+      "last_updated": "2026-10-14T01:00:00"
     }
   ],
   "port_compatibility": [
@@ -39849,39 +39945,84 @@
       "valid_from": null,
       "valid_to": null,
       "data_source": "SIMULATED_REFERENCE"
+    },
+    {
+      "compatibility_id": "PC-V-201-KRPUS",
+      "vessel_id": "V-201",
+      "port_code": "KRPUS",
+      "is_compatible": true,
+      "restriction_reason": "NONE",
+      "max_allowed_draft_m": 15,
+      "vessel_design_draft_m": 9.7,
+      "max_allowed_loa_m": 300,
+      "vessel_loa_m": 221,
+      "approval_required": false,
+      "valid_from": null,
+      "valid_to": null,
+      "data_source": "SIMULATED_REFERENCE"
+    },
+    {
+      "compatibility_id": "PC-V-201-JPYOK",
+      "vessel_id": "V-201",
+      "port_code": "JPYOK",
+      "is_compatible": true,
+      "restriction_reason": "NONE",
+      "max_allowed_draft_m": 16,
+      "vessel_design_draft_m": 9.7,
+      "max_allowed_loa_m": 320,
+      "vessel_loa_m": 221,
+      "approval_required": false,
+      "valid_from": null,
+      "valid_to": null,
+      "data_source": "SIMULATED_REFERENCE"
+    },
+    {
+      "compatibility_id": "PC-V-201-CNTXG",
+      "vessel_id": "V-201",
+      "port_code": "CNTXG",
+      "is_compatible": true,
+      "restriction_reason": "NONE",
+      "max_allowed_draft_m": 13,
+      "vessel_design_draft_m": 9.7,
+      "max_allowed_loa_m": 260,
+      "vessel_loa_m": 221,
+      "approval_required": false,
+      "valid_from": null,
+      "valid_to": null,
+      "data_source": "SIMULATED_REFERENCE"
     }
   ],
   "meta": {
     "filename": "fleet-source.xlsx",
-    "as_of": "2026-10-12T06:10:46",
+    "as_of": "2026-10-14T01:00:00",
     "timezone": "미지정",
     "classification": "SIMULATED",
-    "generated_at": "2026-10-13T15:07:05Z",
-    "content_hash": "9cbc29c771db1797793bada3d7f6d47b8752fa8eb4974865fb8f588a0333cf9b",
+    "generated_at": "2026-10-13T16:30:12Z",
+    "content_hash": "4ddce307bbe3cf5113acaf2c3ccb7ad0458d76cd0256d162a1ac2cd636b1c2db",
     "source": {
       "type": "OneDrive public Excel",
       "url": "https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQBFAfDfPCtYR7ZIlpuHhRttAV-fSfHJx0amC_sOm5ja4n4?e=uHm2ZG",
-      "workbook_sha256": "aa192c226ecd9c59a7a9108c0e479645a2d9e66cb231371b222e3a8a7a33f9eb",
+      "workbook_sha256": "d6e620df5b160af64e85976b39a6133154831587be3c86458ccde4897c547d82",
       "sheets": {
-        "VESSEL": 200,
-        "VESSEL_LIVE": 200,
+        "VESSEL": 201,
+        "VESSEL_LIVE": 201,
         "PORT": 37,
-        "VOYAGE": 200,
+        "VOYAGE": 201,
         "CARGO": 363,
-        "CHARTER": 200,
+        "CHARTER": 201,
         "CHARTER_CONTACT": 8
       }
     },
     "counts": {
-      "VESSEL": 200,
+      "VESSEL": 201,
       "CARGO": 363,
       "PORT": 37,
-      "VOYAGE": 200,
-      "VESSEL_LIVE": 200,
+      "VOYAGE": 201,
+      "VESSEL_LIVE": 201,
       "MAINTENANCE_SCHEDULE": 24,
       "CHARTER_STATUS": 28,
-      "FLEET_ALLOCATION": 200,
-      "PORT_COMPATIBILITY": 565
+      "FLEET_ALLOCATION": 201,
+      "PORT_COMPATIBILITY": 568
     },
     "checks": [
       {
@@ -39921,28 +40062,28 @@
         "check_name": "Duplicate vessel_id",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T15:07:05Z",
+        "checked_at": "2026-10-13T16:30:12Z",
         "detail": "VESSEL.vessel_id must be unique"
       },
       {
         "check_name": "Missing live position",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T15:07:05Z",
+        "checked_at": "2026-10-13T16:30:12Z",
         "detail": "Every vessel must have one VESSEL_LIVE row"
       },
       {
         "check_name": "Invalid route port",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T15:07:05Z",
+        "checked_at": "2026-10-13T16:30:12Z",
         "detail": "Every route_plan code must exist in PORT"
       },
       {
         "check_name": "Deck capacity mismatch",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T15:07:05Z",
+        "checked_at": "2026-10-13T16:30:12Z",
         "detail": "Deck availability must reconcile to assigned cargo"
       }
     ]
