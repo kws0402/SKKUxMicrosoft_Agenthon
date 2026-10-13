@@ -1384,7 +1384,7 @@ const latlon=l=>l&&finite(l.latitude)&&finite(l.longitude)&&Math.abs(l.latitude)
 const east=n=>{while(n< -60)n+=360;while(n>=300)n-=360;return n;};
 const position=v=>[v.live.latitude,east(v.live.longitude)];
 const status=v=>STATUS[v.operating_status]||{color:'#82909c',short:v.operating_status||'미상',class:'unknown'};
-const isCharterPlanned=v=>v.status==='CHARTER_PLANNED';
+const isCharterPlanned=v=>v.charter.some(c=>c.charter_status==='PLANNED');
 const plannedStatusText=v=>isCharterPlanned(v)?' · 용선 예정':'';
 const plannedStatusBadge=v=>isCharterPlanned(v)?'<span class="planned-status">용선 예정</span>':'';
 const active=r=>r.start_datetime<=ASOF&&ASOF<r.end_datetime;
