@@ -8028,7 +8028,7 @@
       "service_speed_knots": 19,
       "current_max_speed_knots": 17.5,
       "vessel_draft": 9.7,
-      "status": "AVAILABLE",
+      "status": "CHARTER_PLANNED",
       "available_capacity": 6826,
       "maintenance_start_date": null,
       "maintenance_end_date": null,
@@ -39997,12 +39997,12 @@
     "as_of": "2026-10-14T01:00:00",
     "timezone": "미지정",
     "classification": "SIMULATED",
-    "generated_at": "2026-10-13T16:30:12Z",
-    "content_hash": "4ddce307bbe3cf5113acaf2c3ccb7ad0458d76cd0256d162a1ac2cd636b1c2db",
+    "generated_at": "2026-10-13T16:45:32Z",
+    "content_hash": "ed3a3b41eb7242af6b058b7637a2a7d054bdc4d1db458a69075ae57d5d56534f",
     "source": {
       "type": "OneDrive public Excel",
       "url": "https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQBFAfDfPCtYR7ZIlpuHhRttAV-fSfHJx0amC_sOm5ja4n4?e=uHm2ZG",
-      "workbook_sha256": "d6e620df5b160af64e85976b39a6133154831587be3c86458ccde4897c547d82",
+      "workbook_sha256": "77b8fbeaf466baa939ec4f1f6ba18511cd91564bb4002e5432461a019425a8e4",
       "sheets": {
         "VESSEL": 201,
         "VESSEL_LIVE": 201,
@@ -40062,28 +40062,28 @@
         "check_name": "Duplicate vessel_id",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T16:30:12Z",
+        "checked_at": "2026-10-13T16:45:32Z",
         "detail": "VESSEL.vessel_id must be unique"
       },
       {
         "check_name": "Missing live position",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T16:30:12Z",
+        "checked_at": "2026-10-13T16:45:32Z",
         "detail": "Every vessel must have one VESSEL_LIVE row"
       },
       {
         "check_name": "Invalid route port",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T16:30:12Z",
+        "checked_at": "2026-10-13T16:45:32Z",
         "detail": "Every route_plan code must exist in PORT"
       },
       {
         "check_name": "Deck capacity mismatch",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T16:30:12Z",
+        "checked_at": "2026-10-13T16:45:32Z",
         "detail": "Deck availability must reconcile to assigned cargo"
       }
     ]
