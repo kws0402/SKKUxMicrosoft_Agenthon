@@ -28451,6 +28451,21 @@
         "note": "SIMULATED / DUMMY. 실제 연결 불가 연락처.",
         "data_source": "SIMULATED"
       }
+    },
+    {
+      "charter_id": "OWN-V-201",
+      "vessel_id": "V-201",
+      "charterer_name": null,
+      "charter_type": "TIME_CHARTER_OUT",
+      "start_datetime": null,
+      "end_datetime": null,
+      "charter_status": "PLANNED",
+      "own_cargo_allowed": false,
+      "contract_reference": "OWN-V-201",
+      "planner_note": "자동 동기화 테스트용 자가 운항 선박.",
+      "data_source": "MANUAL_TEST",
+      "last_updated": "2026-10-14T01:00:00",
+      "contact": null
     }
   ],
   "fleet_allocation": [
@@ -39997,12 +40012,12 @@
     "as_of": "2026-10-14T01:00:00",
     "timezone": "미지정",
     "classification": "SIMULATED",
-    "generated_at": "2026-10-13T23:45:22Z",
-    "content_hash": "4ddce307bbe3cf5113acaf2c3ccb7ad0458d76cd0256d162a1ac2cd636b1c2db",
+    "generated_at": "2026-10-13T23:47:29Z",
+    "content_hash": "1c736cc9b142515386bdfa7643d398bec6cdcc67c488efc8f9362a1dbf759ce3",
     "source": {
       "type": "OneDrive public Excel",
       "url": "https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQBFAfDfPCtYR7ZIlpuHhRttAV-fSfHJx0amC_sOm5ja4n4?e=uHm2ZG",
-      "workbook_sha256": "31eb59b1ebfea3b4d0df08474575d42f19668a05cd3389b3c619ee756646dd5c",
+      "workbook_sha256": "10f58ed3ab7b529ea5d63f8497abae1d5ab0212336c9a3a05e42c708727d261b",
       "sheets": {
         "VESSEL": 201,
         "VESSEL_LIVE": 201,
@@ -40020,7 +40035,7 @@
       "VOYAGE": 201,
       "VESSEL_LIVE": 201,
       "MAINTENANCE_SCHEDULE": 24,
-      "CHARTER_STATUS": 28,
+      "CHARTER_STATUS": 29,
       "FLEET_ALLOCATION": 201,
       "PORT_COMPATIBILITY": 568
     },
@@ -40062,28 +40077,28 @@
         "check_name": "Duplicate vessel_id",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T23:45:22Z",
+        "checked_at": "2026-10-13T23:47:29Z",
         "detail": "VESSEL.vessel_id must be unique"
       },
       {
         "check_name": "Missing live position",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T23:45:22Z",
+        "checked_at": "2026-10-13T23:47:29Z",
         "detail": "Every vessel must have one VESSEL_LIVE row"
       },
       {
         "check_name": "Invalid route port",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T23:45:22Z",
+        "checked_at": "2026-10-13T23:47:29Z",
         "detail": "Every route_plan code must exist in PORT"
       },
       {
         "check_name": "Deck capacity mismatch",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-13T23:45:22Z",
+        "checked_at": "2026-10-13T23:47:29Z",
         "detail": "Deck availability must reconcile to assigned cargo"
       }
     ]
