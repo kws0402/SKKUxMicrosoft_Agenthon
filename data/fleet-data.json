@@ -64,12 +64,12 @@
       "far_east_return_required": true,
       "availability_note": "극동 복귀 우선 검토",
       "data_source": "SIMULATED",
-      "last_updated": "2026-10-14T02:49:06",
+      "last_updated": "2026-10-14T03:04:58",
       "service_speed_knots": 17.5,
       "current_max_speed_knots": 17,
       "vessel_draft": 8.9,
       "status": "AVAILABLE",
-      "available_capacity": 3259,
+      "available_capacity": 3359,
       "maintenance_start_date": null,
       "maintenance_end_date": null,
       "status_before_reservation": null,
@@ -78,7 +78,7 @@
       "deck2_medium_capacity": 2536,
       "deck2_medium_available": 1120,
       "deck3_small_capacity": 1120,
-      "deck3_small_available": 1020
+      "deck3_small_available": 1120
     },
     {
       "vessel_name": "PCTC PACIFIC SPIRIT",
@@ -144,7 +144,7 @@
       "far_east_return_required": true,
       "availability_note": "극동 복귀 우선 검토",
       "data_source": "SIMULATED",
-      "last_updated": "2026-10-02T00:00:00",
+      "last_updated": "2026-10-14T03:08:05",
       "service_speed_knots": 19,
       "current_max_speed_knots": 19.5,
       "vessel_draft": 10.3,
@@ -18441,35 +18441,6 @@
       "large_vehicle_qty": 0,
       "medium_vehicle_qty": 0,
       "small_vehicle_qty": 410
-    },
-    {
-      "order_id": "ORD-2026-00361",
-      "customer": "test",
-      "origin_port_code": "KRPTK",
-      "destination_port_code": "USTIW",
-      "vehicle_type": "Small",
-      "quantity": 100,
-      "requested_departure": "2026-10-07T00:00:00",
-      "loading_deadline": "2026-10-07T00:00:00",
-      "delivery_deadline": "2026-11-05T20:16:14",
-      "priority": "MEDIUM",
-      "month_end_loading_importance": "NORMAL",
-      "reporting_month": "2026-10-01T00:00:00",
-      "assigned_vessel_id": "V-002",
-      "assigned_voyage_id": "VOY-2026-0002",
-      "order_status": "ASSIGNED",
-      "assignment_reason": "예약 확정 / 3F 100대 / 529c87a5-cd5b-40c8-ace4-a20a94e9b961",
-      "data_source": "AGENT_BOOKING",
-      "created_at": "2026-10-14T02:49:06",
-      "requested_loading_date": "2026-10-07T00:00:00",
-      "latest_loading_date": "2026-10-07T00:00:00",
-      "confirmation_status": "CONFIRMED",
-      "confirmed_by": "Copilot Studio",
-      "confirmed_at": "2026-10-14T02:49:06",
-      "reservation_type": "AGENT_BOOKING:529c87a5-cd5b-40c8-ace4-a20a94e9b961",
-      "large_vehicle_qty": 0,
-      "medium_vehicle_qty": 0,
-      "small_vehicle_qty": 100
     }
   ],
   "port": [
@@ -27586,21 +27557,6 @@
   ],
   "charter_status": [
     {
-      "charter_id": "OWN-V-002",
-      "vessel_id": "V-002",
-      "charterer_name": null,
-      "charter_type": "TIME_CHARTER_OUT",
-      "start_datetime": null,
-      "end_datetime": null,
-      "charter_status": "PLANNED",
-      "own_cargo_allowed": false,
-      "contract_reference": "OWN-V-002",
-      "planner_note": "자가 운항. 용선 기간 및 담당자 없음.",
-      "data_source": "SIMULATED",
-      "last_updated": "2026-10-14T02:49:06",
-      "contact": null
-    },
-    {
       "charter_id": "CHR-2026-001",
       "vessel_id": "V-121",
       "charterer_name": "External Carrier A",
@@ -28350,7 +28306,7 @@
       "allocation_month": "2026-10-01",
       "vessel_id": "V-002",
       "allocated_team": "FAR_EAST_TEAM",
-      "allocation_capacity": 3259,
+      "allocation_capacity": 3359,
       "fleet_priority": "HIGH",
       "far_east_return_required": true,
       "switch_allowed": false,
@@ -28358,7 +28314,7 @@
       "allocation_status": "ALLOCATED",
       "constraint_summary": "극동 복귀 우선 검토",
       "data_source": "SIMULATED",
-      "last_updated": "2026-10-14T02:49:06"
+      "last_updated": "2026-10-14T03:04:58"
     },
     {
       "allocation_id": "ALC-V-003",
@@ -28388,7 +28344,7 @@
       "allocation_status": "ALLOCATED",
       "constraint_summary": "극동 복귀 우선 검토",
       "data_source": "SIMULATED",
-      "last_updated": "2026-10-02T00:00:00"
+      "last_updated": "2026-10-14T03:08:05"
     },
     {
       "allocation_id": "ALC-V-005",
@@ -39810,33 +39766,33 @@
   ],
   "meta": {
     "filename": "fleet-source.xlsx",
-    "as_of": "2026-10-14T02:49:06",
+    "as_of": "2026-10-14T03:08:05",
     "timezone": "미지정",
     "classification": "SIMULATED",
-    "generated_at": "2026-10-14T02:49:56Z",
-    "content_hash": "c91142a100bfcfe839bf28a0b287696dfb7f1eb2f37b0296e5c3f7d0a9f200cf",
+    "generated_at": "2026-10-14T03:25:25Z",
+    "content_hash": "b6d979710b6f1a98757a888c5506a7b655b653370edb499d6c4b97a97642cdff",
     "source": {
       "type": "OneDrive public Excel",
       "url": "https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQDQxuRGYrzaQIaIuS0QZuoeAVRBVdIJryX1OePSh9sTF2Q?e=vWhSQO",
-      "workbook_sha256": "3db0260dde8610e6c6dae4d9ac75610d45ac470b5e3020c3e9c130da6609d880",
+      "workbook_sha256": "0eb896b838e63b48161ee615c511f458d71b1dea358987784a6c4c5fa455ff4e",
       "sheets": {
         "VESSEL": 200,
         "VESSEL_LIVE": 200,
         "PORT": 37,
         "VOYAGE": 200,
-        "CARGO": 361,
+        "CARGO": 360,
         "CHARTER": 200,
         "CHARTER_CONTACT": 8
       }
     },
     "counts": {
       "VESSEL": 200,
-      "CARGO": 361,
+      "CARGO": 360,
       "PORT": 37,
       "VOYAGE": 200,
       "VESSEL_LIVE": 200,
       "MAINTENANCE_SCHEDULE": 24,
-      "CHARTER_STATUS": 29,
+      "CHARTER_STATUS": 28,
       "FLEET_ALLOCATION": 200,
       "PORT_COMPATIBILITY": 565
     },
@@ -39878,28 +39834,28 @@
         "check_name": "Duplicate vessel_id",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-14T02:49:56Z",
+        "checked_at": "2026-10-14T03:25:25Z",
         "detail": "VESSEL.vessel_id must be unique"
       },
       {
         "check_name": "Missing live position",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-14T02:49:56Z",
+        "checked_at": "2026-10-14T03:25:25Z",
         "detail": "Every vessel must have one VESSEL_LIVE row"
       },
       {
         "check_name": "Invalid route port",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-14T02:49:56Z",
+        "checked_at": "2026-10-14T03:25:25Z",
         "detail": "Every route_plan code must exist in PORT"
       },
       {
         "check_name": "Deck capacity mismatch",
         "issue_count": 0,
         "status": "PASS",
-        "checked_at": "2026-10-14T02:49:56Z",
+        "checked_at": "2026-10-14T03:25:25Z",
         "detail": "Deck availability must reconcile to assigned cargo"
       }
     ]
