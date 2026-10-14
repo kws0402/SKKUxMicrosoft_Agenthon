@@ -17,7 +17,7 @@ permissions:
 
 env:
   EXCEL_PUBLIC_URL: >-
-    https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQBFAfDfPCtYR7ZIlpuHhRttAV-fSfHJx0amC_sOm5ja4n4?e=uHm2ZG
+    https://m365cpi33505044-my.sharepoint.com/:x:/g/personal/billiev_m365cpi33505044_onmicrosoft_com/IQDQxuRGYrzaQIaIuS0QZuoeAVRBVdIJryX1OePSh9sTF2Q?e=vWhSQO
 
 jobs:
   sync:
